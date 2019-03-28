@@ -1,0 +1,115 @@
+
+module part2 ( A, B, O );
+  input [7:0] A;
+  input [7:0] B;
+  output [7:0] O;
+  wire   n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16,
+         n17, n18, n19, n20, n21, n22, n23, n24, n25, n26, n27, n28, n29, n30,
+         n31, n32, n33, n34, n35, n36, n37, n38, n39, n40, n41, n42, n43, n44,
+         n45, n46, n47, n48, n49, n50, n51, n52, n53, n54, n55, n56, n57, n58,
+         n59, n60, n61, n62, n63, n64, n65, n66, n67, n68, n69, n70, n71, n72,
+         n73, n74, n75, n76, n77, n78, n79, n80, n81, n82, n83, n84, n85, n86,
+         n87, n88, n89, n90, n91, n92;
+
+  INV_X1 U1 ( .A(n85), .ZN(n21) );
+  INV_X1 U2 ( .A(n76), .ZN(n18) );
+  INV_X1 U3 ( .A(n67), .ZN(n15) );
+  INV_X1 U4 ( .A(n58), .ZN(n12) );
+  INV_X1 U5 ( .A(n49), .ZN(n9) );
+  INV_X1 U6 ( .A(n37), .ZN(n6) );
+  INV_X1 U7 ( .A(n79), .ZN(n16) );
+  INV_X1 U8 ( .A(n70), .ZN(n13) );
+  INV_X1 U9 ( .A(n61), .ZN(n10) );
+  INV_X1 U10 ( .A(n52), .ZN(n7) );
+  INV_X1 U11 ( .A(n43), .ZN(n4) );
+  INV_X1 U12 ( .A(n32), .ZN(n1) );
+  INV_X1 U13 ( .A(n88), .ZN(n19) );
+  INV_X1 U14 ( .A(B[2]), .ZN(n29) );
+  INV_X1 U15 ( .A(B[3]), .ZN(n28) );
+  INV_X1 U16 ( .A(B[4]), .ZN(n27) );
+  INV_X1 U17 ( .A(B[5]), .ZN(n26) );
+  INV_X1 U18 ( .A(B[6]), .ZN(n25) );
+  INV_X1 U19 ( .A(B[1]), .ZN(n30) );
+  INV_X1 U20 ( .A(n38), .ZN(n2) );
+  INV_X1 U21 ( .A(A[2]), .ZN(n17) );
+  INV_X1 U22 ( .A(A[3]), .ZN(n14) );
+  INV_X1 U23 ( .A(A[4]), .ZN(n11) );
+  INV_X1 U24 ( .A(A[5]), .ZN(n8) );
+  INV_X1 U25 ( .A(A[6]), .ZN(n5) );
+  INV_X1 U26 ( .A(A[0]), .ZN(n23) );
+  INV_X1 U27 ( .A(A[1]), .ZN(n20) );
+  INV_X1 U28 ( .A(n92), .ZN(n22) );
+  INV_X1 U29 ( .A(A[7]), .ZN(n3) );
+  INV_X1 U30 ( .A(B[7]), .ZN(n24) );
+  NOR2_X1 U31 ( .A1(n31), .A2(n1), .ZN(O[7]) );
+  NAND2_X1 U32 ( .A1(n33), .A2(n2), .ZN(n32) );
+  NOR2_X1 U33 ( .A1(n2), .A2(n33), .ZN(n31) );
+  NAND2_X1 U34 ( .A1(n34), .A2(n35), .ZN(n33) );
+  NAND2_X1 U35 ( .A1(B[6]), .A2(n36), .ZN(n35) );
+  NAND2_X1 U36 ( .A1(n6), .A2(n5), .ZN(n36) );
+  NAND2_X1 U37 ( .A1(A[6]), .A2(n37), .ZN(n34) );
+  NOR2_X1 U38 ( .A1(n39), .A2(n40), .ZN(n38) );
+  NOR2_X1 U39 ( .A1(n24), .A2(A[7]), .ZN(n40) );
+  NOR2_X1 U40 ( .A1(n3), .A2(B[7]), .ZN(n39) );
+  NOR2_X1 U41 ( .A1(n41), .A2(n42), .ZN(O[6]) );
+  NOR2_X1 U42 ( .A1(n6), .A2(n43), .ZN(n42) );
+  NOR2_X1 U43 ( .A1(n37), .A2(n4), .ZN(n41) );
+  NOR2_X1 U44 ( .A1(n44), .A2(n45), .ZN(n43) );
+  NOR2_X1 U45 ( .A1(n25), .A2(A[6]), .ZN(n45) );
+  NOR2_X1 U46 ( .A1(n5), .A2(B[6]), .ZN(n44) );
+  NAND2_X1 U47 ( .A1(n46), .A2(n47), .ZN(n37) );
+  NAND2_X1 U48 ( .A1(B[5]), .A2(n48), .ZN(n47) );
+  NAND2_X1 U49 ( .A1(n9), .A2(n8), .ZN(n48) );
+  NAND2_X1 U50 ( .A1(A[5]), .A2(n49), .ZN(n46) );
+  NOR2_X1 U51 ( .A1(n50), .A2(n51), .ZN(O[5]) );
+  NOR2_X1 U52 ( .A1(n9), .A2(n52), .ZN(n51) );
+  NOR2_X1 U53 ( .A1(n49), .A2(n7), .ZN(n50) );
+  NOR2_X1 U54 ( .A1(n53), .A2(n54), .ZN(n52) );
+  NOR2_X1 U55 ( .A1(n26), .A2(A[5]), .ZN(n54) );
+  NOR2_X1 U56 ( .A1(n8), .A2(B[5]), .ZN(n53) );
+  NAND2_X1 U57 ( .A1(n55), .A2(n56), .ZN(n49) );
+  NAND2_X1 U58 ( .A1(B[4]), .A2(n57), .ZN(n56) );
+  NAND2_X1 U59 ( .A1(n12), .A2(n11), .ZN(n57) );
+  NAND2_X1 U60 ( .A1(A[4]), .A2(n58), .ZN(n55) );
+  NOR2_X1 U61 ( .A1(n59), .A2(n60), .ZN(O[4]) );
+  NOR2_X1 U62 ( .A1(n12), .A2(n61), .ZN(n60) );
+  NOR2_X1 U63 ( .A1(n58), .A2(n10), .ZN(n59) );
+  NOR2_X1 U64 ( .A1(n62), .A2(n63), .ZN(n61) );
+  NOR2_X1 U65 ( .A1(n27), .A2(A[4]), .ZN(n63) );
+  NOR2_X1 U66 ( .A1(n11), .A2(B[4]), .ZN(n62) );
+  NAND2_X1 U67 ( .A1(n64), .A2(n65), .ZN(n58) );
+  NAND2_X1 U68 ( .A1(B[3]), .A2(n66), .ZN(n65) );
+  NAND2_X1 U69 ( .A1(n15), .A2(n14), .ZN(n66) );
+  NAND2_X1 U70 ( .A1(A[3]), .A2(n67), .ZN(n64) );
+  NOR2_X1 U71 ( .A1(n68), .A2(n69), .ZN(O[3]) );
+  NOR2_X1 U72 ( .A1(n15), .A2(n70), .ZN(n69) );
+  NOR2_X1 U73 ( .A1(n67), .A2(n13), .ZN(n68) );
+  NOR2_X1 U74 ( .A1(n71), .A2(n72), .ZN(n70) );
+  NOR2_X1 U75 ( .A1(n28), .A2(A[3]), .ZN(n72) );
+  NOR2_X1 U76 ( .A1(n14), .A2(B[3]), .ZN(n71) );
+  NAND2_X1 U77 ( .A1(n73), .A2(n74), .ZN(n67) );
+  NAND2_X1 U78 ( .A1(B[2]), .A2(n75), .ZN(n74) );
+  NAND2_X1 U79 ( .A1(n18), .A2(n17), .ZN(n75) );
+  NAND2_X1 U80 ( .A1(A[2]), .A2(n76), .ZN(n73) );
+  NOR2_X1 U81 ( .A1(n77), .A2(n78), .ZN(O[2]) );
+  NOR2_X1 U82 ( .A1(n18), .A2(n79), .ZN(n78) );
+  NOR2_X1 U83 ( .A1(n76), .A2(n16), .ZN(n77) );
+  NOR2_X1 U84 ( .A1(n80), .A2(n81), .ZN(n79) );
+  NOR2_X1 U85 ( .A1(n29), .A2(A[2]), .ZN(n81) );
+  NOR2_X1 U86 ( .A1(n17), .A2(B[2]), .ZN(n80) );
+  NAND2_X1 U87 ( .A1(n82), .A2(n83), .ZN(n76) );
+  NAND2_X1 U88 ( .A1(B[1]), .A2(n84), .ZN(n83) );
+  NAND2_X1 U89 ( .A1(n20), .A2(n85), .ZN(n84) );
+  NAND2_X1 U90 ( .A1(A[1]), .A2(n21), .ZN(n82) );
+  NAND2_X1 U91 ( .A1(n86), .A2(n87), .ZN(O[1]) );
+  NAND2_X1 U92 ( .A1(n88), .A2(n21), .ZN(n87) );
+  NAND2_X1 U93 ( .A1(n19), .A2(n85), .ZN(n86) );
+  NAND2_X1 U94 ( .A1(B[0]), .A2(A[0]), .ZN(n85) );
+  NOR2_X1 U95 ( .A1(n89), .A2(n90), .ZN(n88) );
+  NOR2_X1 U96 ( .A1(n30), .A2(A[1]), .ZN(n90) );
+  NOR2_X1 U97 ( .A1(n20), .A2(B[1]), .ZN(n89) );
+  NAND2_X1 U98 ( .A1(n22), .A2(n91), .ZN(O[0]) );
+  NAND2_X1 U99 ( .A1(B[0]), .A2(n23), .ZN(n91) );
+  NOR2_X1 U100 ( .A1(n23), .A2(B[0]), .ZN(n92) );
+endmodule
+
