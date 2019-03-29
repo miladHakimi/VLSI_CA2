@@ -4,17 +4,18 @@ def purify(line):
 			line.remove(i)
 
 def parser(line):
+		key_names = ["XNOR", "XOR", "NAND", "AND", "NOR", "OR", "INV"]
+		
 		ports = []
 		names = line.split('(')[0].split(' ')
-		
+		purify(names)
 		t = names[0]
 		type = ""
-		if "XNOR" in t or "XOR" in t:
-			type = "XOR"
-		elif "AND" in t:
-			type = "AND"
-		elif "OR" in t:
-			type = "OR"
+
+		for i in key_names:
+			if i in t:
+				type = i
+				break
 
 		purify(names)
 
@@ -24,4 +25,5 @@ def parser(line):
 			# purify(s)
 			ports.append(s[0])
 
-		return type, names[1], ports[0: -1], ports[-1] 
+		return type, names[1], ports[0: -1], ports[-1]
+		
