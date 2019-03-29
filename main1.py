@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
 			modules.append(Module(type, name, input_nodes, output_node))
 
-	# f = open("input.txt", "r")
+	f = open("input.txt", "r")
 
-	# for i in f:
+	for i in f:
 		
