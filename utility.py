@@ -24,4 +24,4 @@ def parser(line):
 			# purify(s)
 			ports.append(s[0])
 
-		return type, names[1], ports[0: -1], ports[-1]
+		return type, names[1], ports[0: -1], ports[-1] 
