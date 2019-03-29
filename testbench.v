@@ -33,4 +33,9 @@ module part1TB();
 		repeat(103000)
 			#20 clk = ~clk;
 	end
+
+	initial begin
+		$dumpfile("testII.vcd");
+		$dumpvars(0, part1TB); //test is your Testbench module
+	end
 endmodule
