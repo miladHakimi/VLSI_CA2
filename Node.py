@@ -4,6 +4,7 @@ class Node:
 	def __init__(self, name):
 		self.name = name
 		self.p = 0
+		self.value = -1
 
 	def get_activity():
 		return self.p*(1-self.p)
