@@ -13,7 +13,6 @@ if __name__ == '__main__':
 	
 	extract("part1.v", modules, nodes)
 	A, B, count = get_primary_inputs()
-	
 
 	for i in A:
 		nodes["A["+i+"]"].p = A[i]/count
