@@ -54,29 +54,37 @@ def extract(fileName, modules, nodes):
 
 			modules.append(Module(t, name, input_nodes, output_node))
 
+def run_modules(done_count, modules):
+	for l in modules:
+		if l.done:
+			continue
+		elif l.calc_leakage():
+			done_count += 1
+		if done_count == len(modules):
+			break
+	return done_count
+
 def calc_sums(A_input, B_input, modules, nodes):
 	sums = []
 	for i in A_input:
 		for j in B_input:
 			sum = 0
+			done = 0
+			
+			# init primiary inputs
 			for k in range(8):
 				nodes["A["+str(k)+"]"].value = str(i[k])
 				nodes["B["+str(k)+"]"].value = str(j[k])
 
-			done = 0
+			# reset modules
 			for l in modules:
 				l.done = False
 
-			while True:
-				for l in modules:
-					if l.done:
-						continue
-					elif l.calc_leakage():
-						done += 1
-					if done == len(modules):
-						break
-				if done == len(modules):
-					break
+			# calc leakage for each module
+			while done < len(modules):
+				done = run_modules(done, modules)
+
+			# calc total leakage
 			for l in modules:
 				sum += l.leakage
 			sums.append((sum, (i, j)))
