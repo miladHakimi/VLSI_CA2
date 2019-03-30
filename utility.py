@@ -64,13 +64,13 @@ def run_modules(done_count, modules):
 			break
 	return done_count
 
-def calc_sums(A_input, B_input, modules, nodes):
+def calc_leakages(A_input, B_input, modules, nodes):
 	sums = []
 	for i in A_input:
 		for j in B_input:
 			sum = 0
 			done = 0
-			
+
 			# init primiary inputs
 			for k in range(8):
 				nodes["A["+str(k)+"]"].value = str(i[k])
@@ -100,3 +100,23 @@ def generate_inputs():
 def print_leakage_results(sums, range):
 	for i in sums[0:range]:
 		print ("for A = " + str(i[1][0]) + " and B = " + str(i[1][1]) + " leakage = " + str(i[0]))
+
+def get_primary_inputs(fileName="input.txt"):
+	A = {}
+	B = {}
+	count = 0
+	
+	f = open(fileName, "r")
+
+	for i in f:
+		count += 1
+		for j in range(8):
+			index = str(j)
+			if index not in A:
+				A[index] = 0
+				B[index] = 0
+
+			A[index] += int(i[j])
+			B[index] += int(i[j+8])
+
+	return A, B, count
